@@ -137,11 +137,13 @@ class CakeFixtureManager {
 
 			$loaded = false;
 			foreach ($fixturePaths as $path) {
-				$className = Inflector::camelize($fixture);
-				if (is_readable($path . DS . $className . 'Fixture.php')) {
-					$fixtureFile = $path . DS . $className . 'Fixture.php';
+                                $classNameArr = explode("/", $fixture);
+				$className = Inflector::camelize(array_pop($classNameArr));
+                                $appendPath = count($classNameArr) > 0 ? implode(DS , $classNameArr) . DS : "";
+                                $fixtureFile = $path . DS . $appendPath . $className . 'Fixture.php';
+				if (is_readable($fixtureFile)) {
 					require_once $fixtureFile;
-					$fixtureClass = $className . 'Fixture';
+                                        $fixtureClass = $className . 'Fixture';
 					$this->_loaded[$fixtureIndex] = new $fixtureClass();
 					$this->_fixtureMap[$fixtureClass] = $this->_loaded[$fixtureIndex];
 					$loaded = true;
