@@ -1,0 +1,50 @@
+2013-10-29 10:27:35 Error: [MissingPluginException] Plugin all could not be found.
+Exception Attributes: array (
+  'plugin' => 'all',
+)
+Stack Trace:
+#0 /var/www/report_bug/app/Config/bootstrap.php(111): CakePlugin::load('all')
+#1 /var/www/report_bug/lib/Cake/Core/Configure.php(92): include('/var/www/report...')
+#2 /var/www/report_bug/lib/Cake/bootstrap.php(177): Configure::bootstrap(true)
+#3 /var/www/report_bug/app/webroot/index.php(92): include('/var/www/report...')
+#4 {main}
+2013-10-29 10:27:35 Error: [MissingPluginException] Plugin all could not be found.
+Exception Attributes: array (
+  'plugin' => 'all',
+)
+Stack Trace:
+#0 /var/www/report_bug/app/Config/bootstrap.php(111): CakePlugin::load('all')
+#1 /var/www/report_bug/lib/Cake/Core/Configure.php(92): include('/var/www/report...')
+#2 /var/www/report_bug/lib/Cake/bootstrap.php(177): Configure::bootstrap(true)
+#3 /var/www/report_bug/app/webroot/index.php(92): include('/var/www/report...')
+#4 {main}
+2013-10-29 10:27:35 Error: [MissingPluginException] Plugin all could not be found.
+Exception Attributes: array (
+  'plugin' => 'all',
+)
+Stack Trace:
+#0 /var/www/report_bug/app/Config/bootstrap.php(111): CakePlugin::load('all')
+#1 /var/www/report_bug/lib/Cake/Core/Configure.php(92): include('/var/www/report...')
+#2 /var/www/report_bug/lib/Cake/bootstrap.php(177): Configure::bootstrap(true)
+#3 /var/www/report_bug/app/webroot/index.php(92): include('/var/www/report...')
+#4 {main}
+2013-10-29 10:27:35 Error: [MissingPluginException] Plugin all could not be found.
+Exception Attributes: array (
+  'plugin' => 'all',
+)
+Stack Trace:
+#0 /var/www/report_bug/app/Config/bootstrap.php(111): CakePlugin::load('all')
+#1 /var/www/report_bug/lib/Cake/Core/Configure.php(92): include('/var/www/report...')
+#2 /var/www/report_bug/lib/Cake/bootstrap.php(177): Configure::bootstrap(true)
+#3 /var/www/report_bug/app/webroot/index.php(92): include('/var/www/report...')
+#4 {main}
+2013-10-29 10:27:35 Error: [MissingPluginException] Plugin all could not be found.
+Exception Attributes: array (
+  'plugin' => 'all',
+)
+Stack Trace:
+#0 /var/www/report_bug/app/Config/bootstrap.php(111): CakePlugin::load('all')
+#1 /var/www/report_bug/lib/Cake/Core/Configure.php(92): include('/var/www/report...')
+#2 /var/www/report_bug/lib/Cake/bootstrap.php(177): Configure::bootstrap(true)
+#3 /var/www/report_bug/app/webroot/index.php(92): include('/var/www/report...')
+#4 {main}

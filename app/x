@@ -1,0 +1,12 @@
+<?php
+
+function load_class($classname){
+    echo "Class to be loaded $classname";
+    require ('y.php');
+    echo "\n\n\n\n";
+}
+
+spl_autoload_register('load_class');
+$obj = new ClassName();
+?>
+
