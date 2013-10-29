@@ -1,9 +1,12 @@
 <?php
+App::uses("Cron", "Lib");
+App::uses("BugzillaCron", "Lib");
+
 class BugReporterShell extends AppShell {
-    public $tasks = array('BugzillaCron');
 
     public function main() {
-        $this->BugzillaCron->execute();    
+        $cron = new BugzillaCron();
+        $cron->execute();
     }
 }
 
