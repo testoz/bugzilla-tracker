@@ -63,7 +63,6 @@ class InitCronTest extends CakeTestCase{
      
     public function testEntrySkip(){
         $this->loadFixtures('CronDetailWithData');
-        //die();
         // SUT
         $dummyCron = new DummyCron();
         $dummyCron->publicInitCron($this->shell);

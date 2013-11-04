@@ -26,6 +26,11 @@ abstract class Cron {
      */
     public $name;
     
+    /**
+     * primary key of the cron table for the current cron
+     * 
+     * @var type int
+     */
     public $id;
 
     /**
@@ -72,7 +77,7 @@ abstract class Cron {
      * @param string $data
      */
     protected function setCronData($data){
-        $this->shell->out("Setting data ($data) for the next time I will see you.");
+        $this->shell->out("Setting cron data ($data)");
         $this->CronDetail->id = $this->id;
         $this->CronDetail->set('data', $data);
         $this->CronDetail->save();

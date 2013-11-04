@@ -11,10 +11,12 @@
  * @author applect
  */
 class ImapEmail {
+    public $msg_id;
     public $body;
     public $subject;
     public $from;
     public $reach_time;
+    public $reach_time_str;
     public $attachments;
     public $type;
 }
