@@ -15,21 +15,23 @@ class BugzillaCron extends Cron {
     public $name = "BugzillaCron";
 
     # IMAP Settings
-    public $imap_url = 'imap.gmail.com';
-    public $imap_username = 'testbugzilla562@gmail.com';
-    public $imap_password = 'pass@word';
+    public $imap_url        = 'imap.gmail.com';
+    public $imap_username   = 'bugs@meritnation.com';
+    public $imap_password   = '******';
 
     # Bugzilla Settings
-    public $bugzilla_url = 'http://bugzilla.mn.com';
-    public $bugzilla_username = 'testbugzilla562@gmail.com';
-    public $bugzilla_password = 'chikoo@1';
-    public $bugzilla_product = 'Meritnation.com';
-    public $bugzilla_product_ver = "1.0";
-    public $bugzilla_component = 'CustomerBugs';
-    public $bugzilla_report_username = "testbugzilla562@gmail.com";
-    public $bugzilla_report_fullname = "Bugzilla Report Cron";
-    public $bugzilla_assigned_username = "testbugzilla562@gmail.com";
-    public $bugzilla_assigned_fullname = "Bugzilla Report Cron";
+    public $bugzilla_url                = 'http://testing.applect.com:8181';
+    public $bugzilla_username           = 'tejaswi.sharma@meritnation.com';
+    public $bugzilla_password           = '*****';
+    public $bugzilla_product            = 'Meritnation Site';
+    public $bugzilla_product_ver        = "1.0";
+    public $bugzilla_component          = 'Live Site Customer Reported Bugs';
+    public $bugzilla_report_username    = "tejaswi.sharma@meritnation.com";
+    public $bugzilla_report_fullname    = "Bugzilla Report Cron";
+    public $bugzilla_assigned_username  = "vivek.upadhyay@meritnation.com";
+    public $bugzilla_assigned_fullname  = "Vivek Upadhyay";
+    public $bugzilla_cc                 = "";
+    
     private $_imap_driver = null;
     private $_bugzilla_driver = null;
 
