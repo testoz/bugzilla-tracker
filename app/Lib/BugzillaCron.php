@@ -17,14 +17,14 @@ class BugzillaCron extends Cron {
     # IMAP Settings
     public $imap_url        = 'imap.gmail.com';
     public $imap_username   = 'bugs@meritnation.com';
-    public $imap_password   = '******';
+    public $imap_password   = 'pass@word';
 
     # Bugzilla Settings
-    public $bugzilla_url                = 'http://testing.applect.com:8181';
+    public $bugzilla_url                = 'http://testing.applect.com:8181/bugzilla';
     public $bugzilla_username           = 'tejaswi.sharma@meritnation.com';
-    public $bugzilla_password           = '*****';
+    public $bugzilla_password           = 'tejaswi';
     public $bugzilla_product            = 'Meritnation Site';
-    public $bugzilla_product_ver        = "1.0";
+    public $bugzilla_product_ver        = null;
     public $bugzilla_component          = 'Live Site Customer Reported Bugs';
     public $bugzilla_report_username    = "tejaswi.sharma@meritnation.com";
     public $bugzilla_report_fullname    = "Bugzilla Report Cron";
@@ -63,6 +63,8 @@ class BugzillaCron extends Cron {
             } else if ($response['bug_status'] == 2) {
                 $this->shell->out("Bug already existed as bugid #" . $response['id']
                         . " therefore email added as comment with commentid #" . $response['comment_id']);
+            }else if ($response['bug_status'] == 0){
+                $this->shell->out("Error:" . $response['error']);
             }
         } else {
             $this->shell->out("processing failed");

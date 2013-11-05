@@ -68,6 +68,10 @@ abstract class Cron {
             $this->CronDetail->save(array('name' => $this->name));
             $this->id = $this->CronDetail->id;
         }
+
+        $this->CronDetail->id = $this->id;
+        $this->CronDetail->set('start_time', date('Y-m-d H:i:s'));
+        $this->CronDetail->save();
     }
     
     /**

@@ -29,7 +29,8 @@ class BugzillaAdaptor implements BugzillaInterface{
             'bug_status' => 0, //0 means error,  1 means bug added and 2 means comment added,
             'id' => null , // bug_id created or updated
             'comment_id' => null,
-            'attachments' => array() // names of files to be added as attachement
+            'attachments' => array(), // names of files to be added as attachement
+            'error'      => ''
         );
         
         $search_params = array(
@@ -40,7 +41,7 @@ class BugzillaAdaptor implements BugzillaInterface{
         );
         
         $search_res = $this->bugzilla->searchBug($search_params);
-        
+        //print_r($search_res); 
         if(empty($search_res['bugs'])){
             
             $bugzillaBug = array(
@@ -54,9 +55,12 @@ class BugzillaAdaptor implements BugzillaInterface{
                 'platform'    => "All"
             );
             $response = $this->bugzilla->createBug($bugzillaBug);
+            //print_r($response);
             if(isset($response['id'])){
                 $result['bug_status']   = 1;
                 $result['id']           = $response['id'];
+            }else{
+                $result['error']        = $response['faultString'];
             }
         }else{
             
@@ -76,7 +80,10 @@ class BugzillaAdaptor implements BugzillaInterface{
                 $result['bug_status']   = 2;
                 $result['id']           = $last_found_bug['id'];
                 $result['comment_id']   = $response['id'];
+            }else{
+                $result['error']        = $response['faultString'];
             }
+
         }
         
         /**
